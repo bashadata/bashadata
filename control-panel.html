@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - Pasha Data</title>
+    
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #8b5cf6;
+            --secondary-color: #1f2937;
+            --accent-color: #10b981;
+            --bg-dark: #111827;
+            --bg-card: #1f2937;
+            --text-light: #f9fafb;
+            --border-color: #374151;
+        }
+    }
+
+    @layer base {
+        body {
+            @apply bg-[var(--bg-dark)] text-[var(--text-light)];
+        }
+        
+        * {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%233b82f6" stroke-width="2"><path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/></svg>'), auto;
+        }
+        
+        button, a, input, select, textarea {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%230ea5e9" stroke-width="2"><path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/></svg>'), pointer !important;
+        }
+    }
+
+    @layer components {
+        .card {
+            @apply bg-[var(--bg-card)] rounded-lg p-6 border border-[var(--border-color)];
+        }
+        
+        .input-field {
+            @apply bg-[var(--bg-dark)] border border-[var(--border-color)] rounded-lg px-4 py-3 text-[var(--text-light)] w-full focus:outline-none focus:border-[var(--primary-color)];
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel" src="utils/auth.js"></script>
+    <script type="text/babel" src="control-panel-members.js"></script>
+    <script type="text/babel" src="control-panel-app.js"></script>
+</body>
+</html>
