@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasha Data - الصفحة الرئيسية</title>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #8b5cf6;
+            --secondary-color: #1f2937;
+            --accent-color: #10b981;
+            --bg-dark: #111827;
+            --bg-card: rgba(31, 41, 55, 0.8);
+            --text-light: #f9fafb;
+            --border-color: #374151;
+        }
+    }
+
+    @layer base {
+        body {
+            @apply bg-[var(--bg-dark)] text-[var(--text-light)];
+        }
+    }
+
+    @layer components {
+        .card {
+            @apply bg-[var(--bg-card)] rounded-lg p-6 border border-[var(--border-color)] backdrop-blur-sm;
+        }
+        .btn-primary {
+            @apply bg-[var(--primary-color)] hover:bg-purple-600 text-white px-6 py-3 rounded-lg transition-all;
+        }
+        .input-field {
+            @apply bg-[var(--bg-dark)] border border-[var(--border-color)] rounded-lg px-4 py-3 text-[var(--text-light)] w-full;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 15s linear infinite;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel" src="utils/auth.js"></script>
+    <script type="text/babel" src="utils/database.js"></script>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Banner.js"></script>
+    <script type="text/babel" src="components/ImageAd.js"></script>
+    <script type="text/babel" src="components/CategoryButtons.js"></script>
+    <script type="text/babel" src="components/ItemCard.js"></script>
+    <script type="text/babel" src="components/ContactSection.js"></script>
+    <script type="text/babel" src="components/PriceCalculator.js"></script>
+    <script type="text/babel" src="components/ImageGallery.js"></script>
+    <script type="text/babel" src="components/SupportChat.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
